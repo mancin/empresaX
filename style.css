@@ -198,14 +198,13 @@ footer{
 }
 
 @media(max-width: 567px){
-   .container{
+  .container{
     width: 98%;
   }
 
   .cabecalho img{
     width: 60px;  
   }
-	
   .menu{
     margin-left: 10px;
   }
@@ -249,13 +248,15 @@ footer{
   .conteudo1{
     display: block;
   }
-  
+  .conteudo1 img{
+    width: 100%;
+  }
   .conteudo1 div{
     margin-left: 0;
   }
 
   #empresa h1{
-    font-size: 1.1em;
+    font-size: 1.5em;
     margin-bottom: 15px;
   }
   
@@ -265,6 +266,10 @@ footer{
   
   .vejaEquipe{
     margin-left: 19%;
+  }
+
+  .imgEquipe img{
+    width: 100%;
   }
   
   footer{
