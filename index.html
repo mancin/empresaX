@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Empresa X</title>
+</head>
+
+<body>
+  <header>
+    <div class="cabecalho container">
+      <img src="imagens/logo.png" alt="">
+      <div class="menu">
+        <a href="" class="activeMenu">Home</a>
+        <a href="#empresa">Empresa</a>
+        <a href="">Contato</a>
+        <a href="" class="phone">+55 11 3564-3099</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="container">
+        <h1>50 anos<br>de mercado</h1>
+      </div>
+      <img src="imagens/banner.png" style="width:100%;">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="imagens/banner2.png" style="width:100%;">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="imagens/banner3.png" style="width:100%;">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <div class="container">
+    <div id="empresa">
+      <h1>A empresa</h1>
+      <div class="conteudo1">
+        <img src="imagens/foto.png" alt="">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempor purus molestie, iaculis odio et,
+            consectetur eros. Cras dapibus, ante vel sollicitudin porttitor, velit lorem efficitur elit, id tristique
+            nulla odio vitae magna. Curabitur dignissim nunc in consectetur ullamcorper. Praesent gravida gravida
+            tortor.
+            Donec in ligula turpis. Duis ut urna id turpis hendrerit sagittis id sit amet nibh. Integer pellentesque
+            felis
+            maximus, pharetra ex ut, auctor quam. Nullam dignissim tellus non diam hendrerit dignissim. Curabitur
+            hendrerit risus pellentesque elit molestie, ac viverra ligula facilisis. Praesent iaculis leo sit amet eros
+            pharetra, quis rhoncus est rhoncus.</p>
+          <br>
+          <br>
+          <button class="saibaMais">Saiba mais »</button>
+        </div>
+      </div>
+      <div class="equipe">
+        <p>Duis ut urna id turpis hendrerit sagittis id sit amet nibh. Integer pellentesque felis maximus, pharetra ex
+          ut,
+          auctor quam. Nullam dignissim tellus non diam hendrerit dignissim. Curabitur hendrerit risus pellentesque elit
+          molestie, ac viverra ligula facilisis. Praesent iaculis leo sit amet eros pharetra, quis rhoncus est rhoncus.
+        </p>
+        <br>
+        <button class="vejaEquipe" onclick="mostrarEquipe()">Veja nossa equipe &#8659;</button>
+      </div>
+      <div class="imgEquipe">
+        <img src="imagens/foto.png" alt="">
+        <img src="imagens/foto.png" alt="">
+        <img src="imagens/foto.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="contFooter">
+        <div class="rua"><span>Rua Genérica, nº 123 <br>Centro - Santo André/SP</span></div>
+        <div class="contato"><span>contato@empresax.com.br</span></div>      
+        <div class="numero"><span>+55 11 35643099</span></div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+
+
+
+    const divImg = document.querySelector('.imgEquipe');
+    function mostrarEquipe(){
+      
+      if(divImg.style.display == "block"){
+        divImg.style.display = "none";
+      } else{
+        divImg.style.display = "block";
+      }
+    }
+  </script>
+</body>
+
+</html>
