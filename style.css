@@ -204,17 +204,20 @@ footer{
 
   .cabecalho img{
     width: 100px;
-    margin-left: 100px;
+    
+  }
+  .menu{
+    margin-left: 10px;
   }
   .cabecalho{
     padding: 10px;
-    display: block;
+    display: flex;
   }
   
   header a{
     padding: 5px;
     margin: 10px 1px;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .phone{
@@ -257,17 +260,12 @@ footer{
   }
   
   .saibaMais{
-    margin-left: 20%; 
+    margin-left: 30%; 
   }
   
   .vejaEquipe{
-    margin-left: 13%;
+    margin-left: 19%;
   }
-  
-  .equipe{
-
-  }
-
   
   footer{
     height: 120px;
