@@ -198,14 +198,14 @@ footer{
 }
 
 @media(max-width: 567px){
-  .container{
-    width: 95%;
+   .container{
+    width: 98%;
   }
 
   .cabecalho img{
-    width: 100px;
-    
+    width: 60px;  
   }
+	
   .menu{
     margin-left: 10px;
   }
